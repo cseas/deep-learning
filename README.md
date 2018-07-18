@@ -1,5 +1,5 @@
 # deep-learning
-Code examples and illustrations from the book Deep Learning with Python by François Chollet.
+Code examples and illustrations from the book [Deep Learning with Python](https://www.manning.com/books/deep-learning-with-python) by François Chollet.
 
 # Index
 1. What is deep learning?
