@@ -107,4 +107,15 @@ plt.legend()
 plt.show()
 
 # 3.10 plotting the training and validation accuracy
-plt.clf()
+plt.clf() # clear figure
+acc_values = history_dict['acc']
+val_acc_values = history_dict['val_acc']
+
+plt.plot(epochs, acc_values, 'bo', label='Training acc')
+plt.plot(epochs, val_acc_values, 'b', label='Validation acc')
+plt.title('training and validation accuracy')
+plt.xlabel('Epochs')
+plt.ylabel('Loss')
+plt.legend()
+
+plt.show()
