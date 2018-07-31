@@ -104,7 +104,7 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 
-plt.show()
+# plt.show()
 
 # 3.10 plotting the training and validation accuracy
 plt.clf() # clear figure
@@ -118,4 +118,21 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 
-plt.show()
+# plt.show()
+
+# 3.11 Retraining a model from scratch
+model = models.Sequential()
+model.add(layers.Dense(16, activation='relu', input_shape=(10000,)))
+model.add(layers.Dense(16, activation='relu'))
+model.add(layers.Dense(1, activation='sigmoid'))
+
+model.compile(optimizer='rmsprop',
+    loss='binary_crossentropy',
+    metrics=['accuracy'])
+
+model.fit(x_train, y_train, epochs=4, batch_size=512)
+results = model.evaluate(x_test, y_test)
+
+# accuracy of around 88%
+print(results)
+# print(model.predict(x_test))

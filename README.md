@@ -7,3 +7,4 @@ Code examples and illustrations from the book [Deep Learning with Python](https:
     - [Classifying MNIST with Keras](mnist.py)
 3. Getting started with neural networks
     - [Classifying movie reviews in IMDB dataset](imdb.py)
+    - [Classifying newswires into topics - Reuters dataset](reuters.py)
